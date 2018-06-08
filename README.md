@@ -27,12 +27,22 @@ Code	| Instruction			| Action
 ## Methodology
 * Go through the numbers, assign the rank in the stack to each number
 * Look at binary expansion of the rank, starting at the most significent bit, go thorugh stack a and push all numbers starting with 1 into stack b
-* Recursion (for both stacks) on the bits (moving towards less significent bits)
+* Recursion (for both stacks) on the bits (moving towards less significent bits);
+* Put all instructions in excusion order into a linked list
+* Find relations which instructions cancel out, remove/shorten respective nodes
+
+## Results
+* Astomatically orders list of size n in 
 
 ## Compiling
 Run `make`.
+Three excutables should compile, `push_swap`, `checker` and `cw_display`
 
 ## Running
 ```
-./push_swap 1 2 3 4
+./push_swap 5 3 4 2 1
+```
+```
+./push_swap 5 3 4 2 1 > [file_name]
+./cw_display [file_name] 5 3 4 2 1
 ```
