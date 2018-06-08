@@ -3,9 +3,9 @@
 * The goal of the project is to sort, using two stacks and a list of instructions (see below), in minimal number of steps possible, a list of integers in ascending order
 
 * This project broke down into two programs: a checker program and a push\_swap program
-	* Checker takes a series of numbers as arguments, creates stack A, and then reads from stdin for any of the given operations. After reading is done (CRTL-D), it states whether stack A has been sorted.
-	* Push\_Swap again takes a series of numbers as arguments, creates stacks, and then output the list operations which sorts the stack.
-  
+	* Checker takes a file containing a list of instructions (potentially produced by push_swap) and a series of numbers, run the instructions on the list (animated onscreen) and prints out wheather the list is sorted and the number of instructions it took.
+	* Push\_Swap takes a series of numbers as arguments, creates stacks, and then output the list operations which sorts the stack.
+
 ## Instruction set
 For the following instructions, if the instruction is not possible, the part of
 it that can't be executed won't.
@@ -32,17 +32,26 @@ Code	| Instruction			| Action
 * Find relations which instructions cancel out, remove/shorten respective nodes
 
 ## Results
-* Astomatically orders list of size n in 
+* Asymptotically orders list of size n in <img src="http://latex.codecogs.com/gif.latex?O%28n%5Clog%20n%29"> instructions
 
 ## Compiling
 Run `make`.
-Three excutables should compile, `push_swap`, `checker` and `cw_display`
+Two excutables should compile, `push_swap` and `checker`
 
 ## Running
 ```
 ./push_swap 5 3 4 2 1
 ```
+Animated display of the sorting:
 ```
 ./push_swap 5 3 4 2 1 > [file_name]
 ./cw_display [file_name] 5 3 4 2 1
+```
+Quick display of the sorting result:
+```
+./cw_display -q [file_name] 5 3 4 2 1
+```
+Game mode where user can sort the list themselves by passing instructions in stdin:
+```
+./cw_display -v [file_name] 5 3 4 2 1
 ```
