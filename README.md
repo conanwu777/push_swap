@@ -55,3 +55,7 @@ Game mode where user can sort the list themselves by passing instructions in std
 ```
 ./cw_display -v [file_name] 5 3 4 2 1
 ```
+![alt text](https://github.com/conanwu777/push_swap/blob/master/1.png)
+![alt text](https://github.com/conanwu777/push_swap/blob/master/2.png)
+![alt text](https://github.com/conanwu777/push_swap/blob/master/3.png)
+![alt text](https://github.com/conanwu777/push_swap/blob/master/4.png)
